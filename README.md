@@ -2,6 +2,8 @@
 
 Original Problem: [LeetCode - Two Sum](https://leetcode.com/problems/two-sum)
 
+**You can check the solutions in different programming languages [here](https://github.com/arthur404dev/leetcode-01-two-sum/tree/main/solutions).**
+
 ## Description
 
 Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
