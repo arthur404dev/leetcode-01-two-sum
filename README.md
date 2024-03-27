@@ -44,6 +44,8 @@ Constraints:
 
 ## Solution
 
+**Video Solution [here](https://www.youtube.com/watch?v=7LwIrVLrBUY)**
+
 **You can check the solutions in different programming languages [here](https://github.com/arthur404dev/leetcode-01-two-sum/tree/main/solutions).**
 
 ```python3
