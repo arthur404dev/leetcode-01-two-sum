@@ -2,8 +2,6 @@
 
 Original Problem: [LeetCode - Two Sum](https://leetcode.com/problems/two-sum)
 
-**You can check the solutions in different programming languages [here](https://github.com/arthur404dev/leetcode-01-two-sum/tree/main/solutions).**
-
 ## Description
 
 Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
@@ -43,6 +41,35 @@ Constraints:
 *Only one valid answer exists.*
 
 **Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?**
+
+## Solution
+
+**You can check the solutions in different programming languages [here](https://github.com/arthur404dev/leetcode-01-two-sum/tree/main/solutions).**
+
+```python3
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+    # First, we create an empty dictionary to keep track of numbers we've seen and their positions.
+    numMap = {}
+    # Let's find out how many numbers we have to work with.
+    n = len(nums)
+
+    # Now, we'll look at each number one by one.
+    for i in range(n):
+        # For each number, let's figure out what number we need to add to it to reach our target.
+        complement = target - nums[i]
+        # If this needed number is already in our dictionary, we've found our pair!
+        if complement in numMap:
+            # We return the position of the complement and the current position.
+            return [numMap[complement], i]
+        # If we haven't found the pair yet, let's remember this number and its position.
+        numMap[nums[i]] = i
+
+    # If we get through all numbers without finding a pair, we'll just return an empty list.
+    return []  
+
+# Time Complexity O(n) - We're taking a single stroll through our list, no matter how big it is. So, the time it takes grows linearly with the size of the list.
+# Space Complexity O(n) - In the worst case, we might have to remember each number and its position, which also grows linearly with the size of our list.
+```
 
 ## Contribution
 
